@@ -1,3 +1,4 @@
+# coding:utf-8
 """
 Django settings for daliyfresh project.
 
@@ -37,7 +38,11 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'df_user'
+    'df_user',
+    'df_goods',
+    'tinymce',
+    'df_cart',
+    'df_order',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -104,3 +109,15 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS=[
     os.path.join(BASE_DIR,'static')
 ]
+
+MEDIA_ROOT = os.path.join(BASE_DIR,'static')
+
+# 部署商品图片路径
+# MEDIA_ROOT = '/var/www/dailyfresh/static'
+
+# 富文本编辑器
+TINYCE_DEFAULT_CONFIG = {
+    'theme': 'advanced',
+    'width': 600,
+    'height': 400,
+}
