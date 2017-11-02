@@ -7,7 +7,7 @@
 			<div class="fr">
 				{% if request.session.user_name|default:'' != '' %}
 				<div class="login_btn fl">
-					欢迎您：<em>{{ request.session.user_name }}</em>
+					欢迎您：<em>{{ name }}</em>
 					<span>|</span>
 					<a href="/user/logout/">退出</a>
 				</div>
@@ -35,13 +35,20 @@
 {% if page_name == 1 %}
 		<div class="sub_page_name fl">|&nbsp;&nbsp;&nbsp;&nbsp;{{ title }}</div>
 		<div class="search_con fr">
-			<input type="text" class="input_text fl" name="" placeholder="搜索商品">
-			<input type="button" class="input_btn fr" name="" value="搜索">
+			<form action="/search/" target="_blank">
+				{% csrf_token %}
+				<input type="text" class="input_text fl" name="q" placeholder="搜索商品">
+				<input type="submit" class="input_btn fr" name="" value="搜索">
+			</form>
 		</div>
 {% elif guest_cart|default:1 == 1 %}
 		<div class="search_con fl">
-			<input type="text" class="input_text fl" name="" placeholder="搜索商品">
-			<input type="button" class="input_btn fr" name="" value="搜索">
+			<form action="/search/" target="_blank">
+				{% csrf_token %}
+				<input type="text" class="input_text fl" name="q" placeholder="搜索商品">
+				<input type="submit" class="input_btn fr" name="" value="搜索">
+			</form>
+
 		</div>
 
 		<div class="guest_cart fr">

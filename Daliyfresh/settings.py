@@ -38,11 +38,12 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'df_user',
-    'df_goods',
+    'user',
+    'goods',
     'tinymce',
-    'df_cart',
-    'df_order',
+    'cart',
+    'order',
+    'haystack',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -91,9 +92,9 @@ DATABASES = {
 # Internationalization
 # https://docs.djangoproject.com/en/1.8/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'zh-Hans'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Asia/Shanghai'
 
 USE_I18N = True
 
@@ -121,3 +122,12 @@ TINYCE_DEFAULT_CONFIG = {
     'width': 600,
     'height': 400,
 }
+
+# haystack搜索引擎
+HAYSTACK_CONNECTIONS = {
+    'default': {
+        'ENGINE': 'haystack.backends.whoosh_cn_backend.WhooshEngine',
+        'PATH': os.path.join(BASE_DIR, 'whoosh_index'),
+    }
+}
+HAYSTACK_SIGNAL_PROCESSOR = 'haystack.signals.RealtimeSignalProcessor'
