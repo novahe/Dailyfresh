@@ -147,7 +147,6 @@ def list(request,pindex):
 ```
 效果如下:
 
-
 ![分页效果][1]
 
 ### Django提供orm对数据库的操作
