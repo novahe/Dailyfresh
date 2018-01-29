@@ -264,10 +264,10 @@ def order_handle(request):
         transaction.savepoint_rollback(tran_id)
     return redirect('/user/order/')
 ```
-    [1]: http://image.dearecho.me/1509271764304.jpg
-    [2]: http://image.dearecho.me/1509249000816.jpg
-    [3]: http://image.dearecho.me/1509254427549.jpg
-    [4]: http://image.dearecho.me/1509254463324.jpg
-    [5]: http://image.dearecho.me/1509254538187.jpg
-    [6]: http://image.dearecho.me/1509265988896.jpg
-    [7]: http://image.dearecho.me/1509284357312.jpg
+[1]: http://image.dearecho.me/1509271764304.jpg
+[2]: http://image.dearecho.me/1509249000816.jpg
+[3]: http://image.dearecho.me/1509254427549.jpg
+[4]: http://image.dearecho.me/1509254463324.jpg
+[5]: http://image.dearecho.me/1509254538187.jpg
+[6]: http://image.dearecho.me/1509265988896.jpg
+[7]: http://image.dearecho.me/1509284357312.jpg
