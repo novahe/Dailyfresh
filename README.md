@@ -142,7 +142,6 @@ def list(request,pindex):
 	{% if page.has_next %}
 	<a href="/list{{ typeinfo.id }}_{{ page.next_page_number }}_{{ sort }}/">下一页></a>
 	{% endif %}
-
 </div>
 ```
 效果如下:
