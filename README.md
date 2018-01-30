@@ -78,7 +78,7 @@ def login(func):
     return login_func
 ```
 在需要验证的函数前加`@user_auth.login`即可:
-```
+```python
 @user_auth.login
 def order(request,pindex):  # 用户查看订单信息
     """全部订单"""
@@ -99,12 +99,9 @@ Django提供了`Paginator`类来管理分页的数据。
 在使用`Paginator`时需要给他传递要`分页的对象`和`每一页的个数`。
 
 `Paginator`属性：
-> Paginator.count
-所有页面的对象总
-Paginator.num_pages
-页面总数。
-Paginator.page_range
-页码的范围，从1开始，例如[1, 2, 3,]
+ - `Paginator.count`所有页面的对象
+ - `Paginator.num_pages`总页面总数。
+ - `Paginator.page_range`页码的范围，从1开始，例如`[1, 2, 3,]`
 
 `view.py`代码
 ```python
@@ -146,14 +143,13 @@ def list(request,pindex):
 ```
 效果如下:
 
-
 ![分页效果][1]
 
 ### `Django`提供`ORM`对数据库的操作
 在`ORM`中封装了数据库的相关操作，方便我们通过熟悉的方式：`调用类`来简化数据库的操作，但是书写`ORM`类却是又是一个问题，`Django`在`ORM类`上在次封装，使用更加简单。
 
 在`Django`的`model.py`中书写model类
-```
+```python
 from django.db import models
 
 class OrderInfo(models.Model):
