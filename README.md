@@ -1,5 +1,5 @@
 # Dailyfresh
-基于Django的生鲜电商网站。。。
+基于Django的生鲜电商网站
 
 示例：http://59.110.231.224:8000
 
@@ -147,9 +147,10 @@ def list(request,pindex):
 ```
 效果如下:
 
+
 ![分页效果][1]
 
-### Django提供orm对数据库的操作
+### `Django`提供`ORM`对数据库的操作
 在`ORM`中封装了数据库的相关操作，方便我们通过熟悉的方式：`调用类`来简化数据库的操作，但是书写`ORM`类却是又是一个问题，`Django`在`ORM类`上在次封装，使用更加简单。
 
 在`Django`的`model.py`中书写model类
