@@ -260,8 +260,8 @@ def order_handle(request):
     return redirect('/user/order/')
 ```
 [1]: http://image.dearecho.me/1509271764304.jpg
-[2]: http://image.dearecho.me/1509249000816.jpg
-[3]: http://image.dearecho.me/1509254427549.jpg
+[2]: https://user-images.githubusercontent.com/26545521/35551703-4a6333e6-05cb-11e8-8827-369453ba9747.png
+[3]: https://user-images.githubusercontent.com/26545521/35551779-ab0c5ac4-05cb-11e8-8b17-95a12ea3ae1f.png
 [4]: http://image.dearecho.me/1509254463324.jpg
 [5]: http://image.dearecho.me/1509254538187.jpg
 [6]: http://image.dearecho.me/1509265988896.jpg
